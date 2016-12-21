@@ -16,7 +16,7 @@ public class Apple {
 
     @SuppressWarnings("static-access")
     public void setRandomPosition(){
-        posX = (int)(Math.random()*main.WIDTH);
-        posY = (int)(Math.random()*main.HEIGHT);
+        posX = (int)(Math.random()*(main.WIDTH-1)+1);
+        posY = (int)(Math.random()*(main.HEIGHT-1)+1);
     }
 }

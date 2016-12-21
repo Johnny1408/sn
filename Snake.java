@@ -30,12 +30,16 @@ public class Snake {
         if (direction == 2) snakex[0]--;
         if (direction == 3) snakey[0]--;
         for(int d = length-1; d > 0; d--){
-            if ((snakex[0] == snakex[d]) & (snakey[0] == snakey[d])) length = d-1;
+            if ((snakex[0] == snakex[d]) & (snakey[0] == snakey[d])) {
+                length = d-1;
+
+
+            }
         }
         if (snakex[0] > main.WIDTH-1) snakex[0] = 0;
         if (snakex[0] < 0) snakex[0] = main.WIDTH-1;
-        if (snakey[0] > main.HEIGHT-1) snakey[0] = 0;
-        if (snakey[0] < 0) snakey[0] = main.HEIGHT-1;
+        if (snakey[0] > main.HEIGHT) snakey[0] = 1;
+        if (snakey[0] < 1) snakey[0] = main.HEIGHT;
 
         if (length<2) length = 2;
 
